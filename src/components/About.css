@@ -1,0 +1,86 @@
+.about-container {
+    text-align: center; /* Center the content of the container */
+}
+
+.about-paragraph {
+    width: 80%;
+    text-align: right;
+    margin: 0 10%;
+    font-size: 25px;
+}
+
+.about-paragraph p {
+
+}
+
+.about-text {
+    width: 80%;
+    margin: auto; /* Center the text box */
+    font-size: 24px; /* Adjust size for "big" text */
+}
+
+.text-line {
+    color: grey; /* Default text color */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.text-line:hover {
+    color: black; /* Text color on hover */
+}
+
+.about-container {
+    text-align: center; /* Center the content of the container */
+    padding: 20px 0;
+}
+
+.about-paragraph p {
+    text-align: right;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+/* Styling for the About Us link */
+.about-link {
+    display: inline-block; /* Allows the link to fit the content */
+    text-align: right;
+    padding-right: 10%; /* Right align with the paragraph */
+    color: grey; /* Initial link color */
+    text-decoration: none; /* Remove underline from the link */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.about-link:hover {
+    color: black; /* Link color changes to black on hover */
+}
+
+/* Additional style for the arrow icon within the link */
+.arrow-icon {
+    width: 20px; /* Example size, adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+    vertical-align: middle; /* Align with text */
+}
+
+.about-text {
+    width: 80%;
+    margin: auto; /* Center the text box */
+    font-size: 80px; /* Adjust size for "big" text */
+    font-weight: bold;
+    line-height: 0px;
+    padding-bottom: 50px;
+}
+
+.about-text .text-line-1 {
+    text-align: left;
+}
+
+.about-text .text-line-2 {
+    text-align: right;
+}
+
+.about-paragraph a {
+    font-size: 18px;
+}
+
+.about-paragraph a img {
+    margin-left: 10px;
+}

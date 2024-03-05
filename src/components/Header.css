@@ -1,0 +1,110 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F7F6F5;
+    padding: 15px 10%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure the header is above other content */
+}
+
+.logo-and-nav {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo img {
+    width: 45px;
+    height: 45px;
+}
+
+.header-nav {
+    display: flex;
+    gap: 30px;
+    margin-left: 50px;
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.header-high-contrast {
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: -20%;
+    gap: 10px;
+}
+
+/* Adjusting the toggle switch dimensions */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 40px; /* Reduced from 60px to 40px */
+    height: 22px; /* Reduced from 34px to approximately 22px */
+    margin-left: 10px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 22px; /* Adjusted for smaller size */
+}
+
+.switch-slider:before {
+    position: absolute;
+    content: "";
+    height: 18px; /* Reduced proportionally */
+    width: 18px; /* Reduced proportionally */
+    left: 2px; /* Adjusted for smaller size */
+    bottom: 2px; /* Adjusted for smaller size */
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .switch-slider {
+    background-color: #2196F3;
+}
+
+input:checked + .switch-slider:before {
+    transform: translateX(18px); /* Adjusted for the new size */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo-and-nav {
+        flex-direction: column;
+    }
+
+    .header-nav {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .header-high-contrast {
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,93 @@
+.featured {
+    text-align: left;
+    margin: 50px 0;
+    position: relative; /* For absolute positioning of navigation arrows */
+    padding-left: 10%;
+}
+
+
+
+.slider-container {
+    overflow: hidden;
+    width: 100%; /* Adjust the width as needed */
+
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-out; /* Smooth transition for sliding */
+}
+
+.box {
+    flex: 0 0 auto; /* Prevent boxes from growing or shrinking */
+    width: calc(100% / 5 - 20px); /* Adjust based on the number of boxes visible at once, accounting for margin */
+    height: 300px; /* Fixed height */
+    margin: 0 10px; /* Space between boxes */
+    background-color: white; /* Placeholder for image background */
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* For positioning text */
+    overflow: hidden;
+}
+
+.image {
+    width: 90%;
+    height: auto; /* Adjust based on design preference */
+    background-color: #ccc; /* Placeholder until images are added */
+    background-size: cover;
+    background-position: center;
+}
+
+.tag, .name {
+    color: #000;
+}
+
+.tag {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+
+.name {
+    margin: 20px 0;
+    font-size: 16px; /* Adjust font size as needed */
+    font-weight: bold;
+}
+
+/* Styling for navigation arrow containers */
+.navigation {
+    display: flex;
+    gap: 10px; /* Space between arrow boxes */
+    margin-top: 20px;
+}
+
+/* Individual arrow button styling */
+.navigation button {
+    cursor: pointer;
+    background-color: #ccc; /* Grey background for the boxes */
+    border: none;
+    border-radius: 50%; /* Rounded corners for the boxes */
+    width: 40px; /* Fixed width for the boxes */
+    height: 40px; /* Fixed height for the boxes */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px; /* Adjust arrow size as needed */
+    color: black; /* Arrow color */
+}
+
+/* Add any necessary hover effects for buttons */
+.navigation button:hover {
+    background-color: #bbb; /* Slightly darker on hover */
+}
+
+.navigation button.active {
+    color: #007bff; /* Active arrow color */
+}
+
+.navigation button:not(.active):hover {
+    background-color: #bbb; /* Hover effect for inactive arrows */
+}
