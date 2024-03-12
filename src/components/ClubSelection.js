@@ -84,13 +84,32 @@ const ClubSelection = () => {
         alert(`You selected ${selectedClub} from ${selectedLeague}, ${selectedCountry}.`);
     };
 
+    // State for high contrast mode
+    const [isHighContrast, setIsHighContrast] = useState(false);
+
+    // Toggle high contrast mode
+    const toggleHighContrast = () => setIsHighContrast(!isHighContrast);
+
     return (
         <div className="club-selection-container">
-            <div className="clublink-banner">
+            <div className="clublink-banner animate-slide-in">
                 <img src={`${process.env.PUBLIC_URL}/text-logo.png`} alt="CLUBLINK" />
             </div>
             <div className="club-selection-box">
                 <div className="club-info">
+                    {/* High-contrast toggle */}
+                    <div className="high-contrast-toggle">
+                        <label className="toggle-label">
+                            High Contrast
+                            <input
+                                type="checkbox"
+                                checked={isHighContrast}
+                                onChange={toggleHighContrast}
+                            />
+                            <span className="toggle-slider"></span>
+                        </label>
+                    </div>
+
                     {/* Country Selection */}
                     <div className="selection-box country-info">
                         <button onClick={() => handleSelectCountry(-1)}>&lt;</button>

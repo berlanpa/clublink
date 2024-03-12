@@ -33,7 +33,7 @@
     font-weight: bold;
 }
 
-.header-high-contrast {
+.header-placeholder {
     display: flex;
     align-items: center;
     position: relative;
@@ -104,7 +104,12 @@ input:checked + .switch-slider:before {
         margin-top: 10px;
     }
 
-    .header-high-contrast {
+    .header-placeholder {
         margin-top: 10px;
     }
+}
+
+.header-placeholder img {
+    width: 45px;
+    height: 45px;
 }

@@ -18,16 +18,14 @@ const Header = () => {
                 <nav className="header-nav">
                     <a href="/">Home</a>
                     <a href="/stadiums">Stadiums</a>
-                    <a href="/transfers">Transfers</a>
+                    <a href="/transfers">Players</a>
+                    <a href="/stadiums">Careers</a>
                     <a href="/about">About</a>
                 </nav>
             </div>
-            <div className="header-high-contrast">
-                <span>High Contrast</span>
-                <label className="toggle-switch">
-                    <input type="checkbox" checked={highContrast} onChange={toggleHighContrast} />
-                    <span className="switch-slider"></span>
-                </label>
+            <div className="header-placeholder">
+                <span>/CS3099</span>
+                <img src={`${process.env.PUBLIC_URL}/university-logo.png`} alt="St Andrews University Logo" />
             </div>
         </header>
     );
