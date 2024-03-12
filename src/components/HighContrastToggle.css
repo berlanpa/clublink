@@ -1,0 +1,57 @@
+.high-contrast-toggle-container {
+    padding: 20px 10%; /* Provides padding on the left and right */
+    display: flex;
+    justify-content: flex-end; /* Aligns the toggle to the right */
+    align-items: center; /* Centers the toggle vertically */
+    background-color: white; /* Sets the background color of the toggle container */
+}
+
+/* Styling for the label which includes the toggle text and the switch */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px; /* Width of the switch */
+    height: 34px; /* Height of the switch */
+    margin-left: 10px; /* Space between the label text and the switch */
+}
+
+.toggle-switch input {
+    opacity: 0; /* Hide the default checkbox */
+    width: 0;
+    height: 0;
+}
+
+/* Styling for the custom slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc; /* Default background color of the slider */
+    transition: .4s; /* Smooth transition for the background color change */
+    border-radius: 34px; /* Rounded corners for the slider */
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px; /* Height of the circle inside the slider */
+    width: 26px; /* Width of the circle inside the slider */
+    left: 4px;
+    bottom: 4px;
+    background-color: white; /* Background color of the circle */
+    transition: .4s; /* Smooth transition for moving the circle */
+    border-radius: 50%; /* Makes the circle rounded */
+}
+
+/* Changes the background color of the slider when it's checked/active */
+input:checked + .slider {
+    background-color: #2196F3; /* Example active color, adjust as needed */
+}
+
+/* Moves the circle to the right when the switch is checked/active */
+input:checked + .slider:before {
+    transform: translateX(26px); /* The distance the circle moves */
+}
